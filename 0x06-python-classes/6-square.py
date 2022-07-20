@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """Square module.
-
 This module contains a class that defines a square and its size and its
 position on the screen, checking if the given values are right, and a setter
 and getter methods to set or get them. There's also an area method that returns
 the area of the square, another one that handles the print of the square.
-
 """
 
 
@@ -14,7 +12,6 @@ class Square():
 
     def __init__(self, size=0, position=(0, 0)):
         """Sets the necessary attributes for the Square object.
-
         Args:
             size (int): the size of one edge of the square.
             position (tuple): the coordinates of the square.
@@ -45,9 +42,9 @@ class Square():
     @position.setter
     def position(self, value):
         if type(value) is tuple and len(value) is 2 and \
-                type(value[0]) is int and type(value[1]) is int and \
-                    value[0] >= 0 and value[1] >= 0:
-                 self.__position = value
+            type(value[0]) is int and type(value[1]) is int and \
+                value[0] >= 0 and value[1] >= 0:
+            self.__position = value
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
@@ -65,6 +62,3 @@ class Square():
                 print('#' * self.__size)
         else:
             print()
-
-
-
