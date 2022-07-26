@@ -42,7 +42,6 @@ class Rectangle:
         '''Defining a method to get the area of the Rectangle'''
         return (self.height * self.width)
 
-
     def perimeter(self):
         '''Defining a method to get the perimeter of the Rectangle'''
         if self.height == 0 or self.width == 0:
@@ -57,10 +56,10 @@ class Rectangle:
             printable = ((("#" * self.width) + "\n") * self.height)
             return (printable[:-1])
 
-        def __repr__(self):
-            '''Defining __repr__ Method'''
-            return "Rectangle({}, {})".format(self.width, self.height)
+    def __repr__(self):
+        '''Defining __repr__ Method'''
+        return "Rectangle({}, {})".format(self.width, self.height)
 
-        def __del__(self):
-            """Defining __del__ Method"""
-            print("Bye rectangle...")
+    def __del__(self):
+        """Defining __del__ Method"""
+        print("Bye rectangle...")
