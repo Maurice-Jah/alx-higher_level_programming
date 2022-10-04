@@ -1,8 +1,14 @@
 #!/usr/bin/node
-let nextMax = 0;
-let args = process.argv.slice(2);
-if (args.length > 1) {
-  args.sort();
-  nextMax = args[args.length - 2];
-}
-console.log(nextMax);
+// JS to find the second largest number
+'use strict';
+(function secondBiggest (arg) {
+  let list = [];
+  if (process.argv.length < 4) {
+    console.log(0);
+  } else {
+    for (let count = 2; count < process.argv.length; count++) {
+      list.push(Number(process.argv[count]));
+    }
+    console.log(list.sort()[list.length - 2]);
+  }
+})();
